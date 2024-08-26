@@ -41,7 +41,7 @@ public class ApostaService {
             int idPartida = aposta.get().getIdPartida();
             RestTemplate restTemplate = new RestTemplate();
             ResponseEntity<RetornarPartidaDTO> partida = restTemplate.getForEntity(
-                    "http://localhost:8080/partida/" + idPartida,
+                    "http://54.209.245.182:8080/partida/" + idPartida,
                     RetornarPartidaDTO.class);
             if (partida.getStatusCode().is2xxSuccessful()) {
                 RetornarPartidaDTO partida_ = partida.getBody();
